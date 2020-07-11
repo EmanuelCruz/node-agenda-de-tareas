@@ -22,11 +22,10 @@ const cargarDB = () => {
 
 const crearTarea = (descripcion) => {
   cargarDB();
-
   let porHacer = { descripcion, completado: false };
   listadoPorHacer.push(porHacer);
   guardarDB();
-  return porHacer;
+  return true;
 };
 
 const obtenerListado = (filtro = null) => {

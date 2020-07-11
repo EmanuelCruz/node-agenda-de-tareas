@@ -13,8 +13,8 @@ let comando = argv._[0];
 
 switch (comando) {
   case "crear":
-    let tarea = crearTarea(argv.descripcion);
-    console.log(tarea);
+    let creado = crearTarea(argv.descripcion);
+    creado ? console.log("La tarea se creo"): console.log("La tarea no pudo crearse");
     break;
   case "listar":
     let listado = obtenerListado(argv.completadoListar);
